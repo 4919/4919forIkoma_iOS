@@ -1,0 +1,6 @@
+framework module Pods_4919forIkomaUITests {
+  umbrella header "Pods-4919forIkomaUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

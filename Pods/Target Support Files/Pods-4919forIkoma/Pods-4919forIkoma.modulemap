@@ -1,0 +1,6 @@
+framework module Pods_4919forIkoma {
+  umbrella header "Pods-4919forIkoma-umbrella.h"
+
+  export *
+  module * { export * }
+}
