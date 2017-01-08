@@ -7,19 +7,44 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var menuLabel: UINavigationItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        FIRAuth.auth()?.signInAnonymously(completion: { (user, error) in
+//            let isAnonymous = user!.isAnonymous  // true
+//            let uid = user!.uid
+            
+            let now = Date()
+            
+            let formatter = DateFormatter()
+            let jaLocale = Locale(identifier: "ja_JP")
+            formatter.locale = jaLocale
+            formatter.dateFormat = "MM月dd日(E)"
+            
+//            print(formatter.string(from:now))
+//            
+//            let cal = Calendar.current
+//            var dataComps = cal.dateComponents([.year, .month, .day, .hour, .minute], from: now)
+            
+            let todaysMenu:String! = (formatter.string(from: now))
+            self.menuLabel.title = todaysMenu
+            
+//            print (isAnonymous)
+//            print (uid)
+        })
+        
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-
 }
 

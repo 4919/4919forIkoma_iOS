@@ -5,9 +5,12 @@ target '4919forIkoma' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for 4919forIkoma
+  # Firebase
 
+  pod 'Firebase'
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 
   target '4919forIkomaTests' do
     inherit! :search_paths
