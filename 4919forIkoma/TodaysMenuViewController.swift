@@ -14,11 +14,24 @@ class TodaysMenuViewController: UIViewController{
     
     @IBOutlet weak var naviBar: UINavigationItem!
     
+    /** MenuImage**/
+    @IBOutlet weak var stapleImg: UIImageView!
+    @IBOutlet weak var mainDishImg: UIImageView!
+    @IBOutlet weak var sideDishImg: UIImageView!
+    @IBOutlet weak var soupImg: UIImageView!
+    @IBOutlet weak var dezertImg: UIImageView!
+    
+    /** SubData **/
+    @IBOutlet weak var energyNum: UILabel!
+    @IBOutlet weak var yellowPoint: UILabel!
+    @IBOutlet weak var greenPoint: UILabel!
+    @IBOutlet weak var redPoint: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var uid:String = ""
         let now = Date()
+        let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         
         /**日にちを取得**/
         let formatter = DateFormatter()
@@ -30,13 +43,13 @@ class TodaysMenuViewController: UIViewController{
         let todaysMenu:String! = (formatter.string(from: now))
         self.naviBar.title = todaysMenu
         
-        if uid != String(true){
+        if appDelegate.uid != String(true){
         FIRAuth.auth()?.signInAnonymously(completion: { (user, error) in
             let isAnonymous = user!.isAnonymous
-            uid = user!.uid
+            appDelegate.uid = user!.uid
 
             print (isAnonymous)
-            print (uid)
+            print (appDelegate.uid)
         })
         }
     }
@@ -45,6 +58,22 @@ class TodaysMenuViewController: UIViewController{
         self.navigationController?.popViewController(animated: true)
     }
     
+    /** Button Tap **/
+    @IBAction func stapleBtn(_ sender: Any) {
+        
+    }
+    
+    @IBAction func mainDishBtn(_ sender: Any) {
+    }
+    
+    @IBAction func sideDishBtn(_ sender: Any) {
+    }
+    
+    @IBAction func soupDishBtn(_ sender: Any) {
+    }
+    
+    @IBAction func dezertBtn(_ sender: Any) {
+    }
     
 }
 
