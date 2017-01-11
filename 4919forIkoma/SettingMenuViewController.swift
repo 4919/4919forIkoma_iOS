@@ -21,8 +21,7 @@ class SettingMenuViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func backToTodayButton(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+    @IBAction func backToMothly(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
-
 }

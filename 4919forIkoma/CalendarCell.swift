@@ -20,6 +20,9 @@ class CalendarCell: UICollectionViewCell {
         // UILabelを生成
         textLabel = UILabel()
         textLabel.frame = CGRect(x: 0, y: 0, width:self.frame.width, height:self.frame.height)
+        textLabel.layer.borderColor = UIColor(red: 247 / 255, green: 247 / 255, blue: 247 / 255, alpha: 1.0).cgColor
+        textLabel.layer.borderWidth = 5.0
+        textLabel.backgroundColor = UIColor(red: 247 / 255, green: 247 / 255, blue: 247 / 255, alpha: 1.0)
         textLabel.textAlignment = .center
         
         // Cellに追加

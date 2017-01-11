@@ -11,6 +11,8 @@
 		91F1720F55C73CAC21328E43 /* Pods_4919forIkoma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38CF56943C2EA00AEC3A84E8 /* Pods_4919forIkoma.framework */; };
 		95095E2F1E245DEA00CFCADC /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95095E2E1E245DEA00CFCADC /* DateManager.swift */; };
 		95095E311E245E2E00CFCADC /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95095E301E245E2E00CFCADC /* CalendarCell.swift */; };
+		95095E331E24C24100CFCADC /* memo_board_cut.png in Resources */ = {isa = PBXBuildFile; fileRef = 95095E321E24C24100CFCADC /* memo_board_cut.png */; };
+		95095E351E250A9400CFCADC /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 95095E341E250A9400CFCADC /* calendar.png */; };
 		950E51CA1E22A4600063997D /* backIconRev.png in Resources */ = {isa = PBXBuildFile; fileRef = 950E51C91E22A4600063997D /* backIconRev.png */; };
 		95260C951E22BB120060C360 /* Background_classRoom.png in Resources */ = {isa = PBXBuildFile; fileRef = 95260C941E22BB120060C360 /* Background_classRoom.png */; };
 		95260CC11E22DB200060C360 /* allergy_ebi.png in Resources */ = {isa = PBXBuildFile; fileRef = 95260CA51E22DB200060C360 /* allergy_ebi.png */; };
@@ -40,6 +42,10 @@
 		95260CD91E22DB200060C360 /* allergy_sake.png in Resources */ = {isa = PBXBuildFile; fileRef = 95260CBE1E22DB200060C360 /* allergy_sake.png */; };
 		95260CDA1E22DB200060C360 /* allergy_toriniku.png in Resources */ = {isa = PBXBuildFile; fileRef = 95260CBF1E22DB200060C360 /* allergy_toriniku.png */; };
 		95260CDB1E22DB200060C360 /* allergy_yamaimo.png in Resources */ = {isa = PBXBuildFile; fileRef = 95260CC01E22DB200060C360 /* allergy_yamaimo.png */; };
+		9529F20D1E2549F900046617 /* greenBoard.png in Resources */ = {isa = PBXBuildFile; fileRef = 9529F20B1E2549F900046617 /* greenBoard.png */; };
+		9529F20E1E2549F900046617 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 9529F20C1E2549F900046617 /* pin.png */; };
+		9529F2111E2559B300046617 /* calendar2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9529F20F1E2559B300046617 /* calendar2.png */; };
+		9529F2121E2559B300046617 /* pin2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9529F2101E2559B300046617 /* pin2.png */; };
 		9598E8841E2265CF008F0843 /* SettingMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9598E8831E2265CF008F0843 /* SettingMenuViewController.swift */; };
 		9598E8861E226E40008F0843 /* MonthlyMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9598E8851E226E40008F0843 /* MonthlyMenuViewController.swift */; };
 		95AAB44D1E20C17C00F89E83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AAB44C1E20C17C00F89E83 /* AppDelegate.swift */; };
@@ -112,6 +118,8 @@
 		84C35B236209F56276936065 /* Pods-4919forIkoma.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4919forIkoma.debug.xcconfig"; path = "Pods/Target Support Files/Pods-4919forIkoma/Pods-4919forIkoma.debug.xcconfig"; sourceTree = "<group>"; };
 		95095E2E1E245DEA00CFCADC /* DateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
 		95095E301E245E2E00CFCADC /* CalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
+		95095E321E24C24100CFCADC /* memo_board_cut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = memo_board_cut.png; path = 4919forIkoma/Image/memo_board_cut.png; sourceTree = SOURCE_ROOT; };
+		95095E341E250A9400CFCADC /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calendar.png; path = 4919forIkoma/Image/calendar.png; sourceTree = SOURCE_ROOT; };
 		950E51C91E22A4600063997D /* backIconRev.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backIconRev.png; path = 4919forIkoma/Image/backIconRev.png; sourceTree = SOURCE_ROOT; };
 		95260C941E22BB120060C360 /* Background_classRoom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Background_classRoom.png; path = 4919forIkoma/Image/Background_classRoom.png; sourceTree = SOURCE_ROOT; };
 		95260CA51E22DB200060C360 /* allergy_ebi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = allergy_ebi.png; sourceTree = "<group>"; };
@@ -141,6 +149,10 @@
 		95260CBE1E22DB200060C360 /* allergy_sake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = allergy_sake.png; sourceTree = "<group>"; };
 		95260CBF1E22DB200060C360 /* allergy_toriniku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = allergy_toriniku.png; sourceTree = "<group>"; };
 		95260CC01E22DB200060C360 /* allergy_yamaimo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = allergy_yamaimo.png; sourceTree = "<group>"; };
+		9529F20B1E2549F900046617 /* greenBoard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = greenBoard.png; path = 4919forIkoma/Image/greenBoard.png; sourceTree = SOURCE_ROOT; };
+		9529F20C1E2549F900046617 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pin.png; path = 4919forIkoma/Image/pin.png; sourceTree = SOURCE_ROOT; };
+		9529F20F1E2559B300046617 /* calendar2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calendar2.png; path = 4919forIkoma/Image/calendar2.png; sourceTree = SOURCE_ROOT; };
+		9529F2101E2559B300046617 /* pin2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pin2.png; path = 4919forIkoma/Image/pin2.png; sourceTree = SOURCE_ROOT; };
 		9598E8831E2265CF008F0843 /* SettingMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingMenuViewController.swift; sourceTree = "<group>"; };
 		9598E8851E226E40008F0843 /* MonthlyMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthlyMenuViewController.swift; sourceTree = "<group>"; };
 		95AAB4491E20C17C00F89E83 /* 4919forIkoma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 4919forIkoma.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -251,6 +263,8 @@
 		95260CAC1E22DB200060C360 /* 20Allergens */ = {
 			isa = PBXGroup;
 			children = (
+				9529F20B1E2549F900046617 /* greenBoard.png */,
+				9529F20C1E2549F900046617 /* pin.png */,
 				95260CAD1E22DB200060C360 /* allergy_awabi.png */,
 				95260CAE1E22DB200060C360 /* allergy_banana.png */,
 				95260CAF1E22DB200060C360 /* allergy_butaniku.png */,
@@ -338,6 +352,8 @@
 		95AAB47A1E20C22300F89E83 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				95095E341E250A9400CFCADC /* calendar.png */,
+				95095E321E24C24100CFCADC /* memo_board_cut.png */,
 				95AAB4821E20C22300F89E83 /* splash_4919forIkoma.pdf */,
 				95AAB4831E20C22300F89E83 /* splashIcon_4919forIkoma.pdf */,
 				95AAB47B1E20C22300F89E83 /* 4919forIkoma.pdf */,
@@ -349,6 +365,8 @@
 				95AAB4841E20C22300F89E83 /* splashScreen_4919forIkoma1.png */,
 				95AAB4851E20C22300F89E83 /* splashScreen_4919forIkoma4.7.png */,
 				95AAB4861E20C22300F89E83 /* splashScreen_4919forIkoma5.5.png */,
+				9529F20F1E2559B300046617 /* calendar2.png */,
+				9529F2101E2559B300046617 /* pin2.png */,
 				95BB31021E224752003E3BF3 /* calenderIcon.png */,
 				95AAB4B11E2107EE00F89E83 /* lunch_Dezert.png */,
 				95AAB4B21E2107EE00F89E83 /* lunch_Hashi.png */,
@@ -530,6 +548,7 @@
 				95AAB4571E20C17C00F89E83 /* LaunchScreen.storyboard in Resources */,
 				95260CC11E22DB200060C360 /* allergy_ebi.png in Resources */,
 				95AAB4CC1E211E1800F89E83 /* lunch_Noodle.png in Resources */,
+				9529F20E1E2549F900046617 /* pin.png in Resources */,
 				95AAB48D1E20C22300F89E83 /* splashIcon_4919forIkoma.pdf in Resources */,
 				95AAB4891E20C22300F89E83 /* icon_4919forIkoma.png in Resources */,
 				95260CD31E22DB200060C360 /* allergy_kurumi.png in Resources */,
@@ -546,10 +565,12 @@
 				95260CDB1E22DB200060C360 /* allergy_yamaimo.png in Resources */,
 				95AAB48A1E20C22300F89E83 /* icon_4919forIkoma@2.png in Resources */,
 				95260CCC1E22DB200060C360 /* allergy_daizu.png in Resources */,
+				9529F2121E2559B300046617 /* pin2.png in Resources */,
 				95AAB4C11E2107EE00F89E83 /* lunch_nan.png in Resources */,
 				95260CC21E22DB200060C360 /* allergy_kani.png in Resources */,
 				95260CD51E22DB200060C360 /* allergy_mikan.png in Resources */,
 				95AAB4C21E2107EE00F89E83 /* lunch_Rice.png in Resources */,
+				9529F2111E2559B300046617 /* calendar2.png in Resources */,
 				95260CC61E22DB200060C360 /* allergy_soba.png in Resources */,
 				95AAB4901E20C22300F89E83 /* splashScreen_4919forIkoma5.5.png in Resources */,
 				95AAB48C1E20C22300F89E83 /* splash_4919forIkoma.pdf in Resources */,
@@ -573,6 +594,7 @@
 				95260CD81E22DB200060C360 /* allergy_saba.png in Resources */,
 				95AAB4CE1E2122E500F89E83 /* settingIcon.png in Resources */,
 				95AAB4BE1E2107EE00F89E83 /* lunch_Koppepan.png in Resources */,
+				95095E331E24C24100CFCADC /* memo_board_cut.png in Resources */,
 				95260CD61E22DB200060C360 /* allergy_momo.png in Resources */,
 				95260CCD1E22DB200060C360 /* allergy_gelatine.png in Resources */,
 				95AAB4871E20C22300F89E83 /* 4919forIkoma.pdf in Resources */,
@@ -583,8 +605,10 @@
 				95BB31011E21F913003E3BF3 /* memo_letter.png in Resources */,
 				95AAB4CA1E2110B200F89E83 /* lunch_Nikuryori.png in Resources */,
 				95BB30F91E218108003E3BF3 /* menu_ThreePointG.png in Resources */,
+				95095E351E250A9400CFCADC /* calendar.png in Resources */,
 				95260CD91E22DB200060C360 /* allergy_sake.png in Resources */,
 				950E51CA1E22A4600063997D /* backIconRev.png in Resources */,
+				9529F20D1E2549F900046617 /* greenBoard.png in Resources */,
 				95AAB4C31E2107EE00F89E83 /* lunch_Soup.png in Resources */,
 				95AAB4881E20C22300F89E83 /* 4919forIkoma.ai in Resources */,
 				95AAB4C61E21094E00F89E83 /* lunch_Sakana.png in Resources */,

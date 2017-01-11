@@ -28,6 +28,7 @@ class MonthlyMenuViewController: UIViewController, UICollectionViewDataSource, U
     let daysPerWeek: Int = 7
     let cellMargin: CGFloat = 2.0
     var selectedDate = NSDate()
+    var before:CalendarCell!
     var today: NSDate!
     let weekArray = ["日", "月", "火", "水", "木", "金", "土"]
     
@@ -39,21 +40,21 @@ class MonthlyMenuViewController: UIViewController, UICollectionViewDataSource, U
 
         calenderCollectionView.delegate = self
         calenderCollectionView.dataSource = self
-        calenderCollectionView.backgroundColor = UIColor.white
+        calenderCollectionView.backgroundColor = UIColor(red: 247 / 255, green: 247 / 255, blue: 247 / 255, alpha: 1.0)
         
         collectionView.register(CalendarCell.self, forCellWithReuseIdentifier: "cell")
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        if appDelegate.count == 0 {
-//            let todayMenuVC = TodaysMenuViewController()
-//            self.navigationController?.pushViewController(todayMenuVC, animated: true)
-//            
-//            self.appDelegate.count += 1
-//            
-//            print (self.appDelegate.count)
-//        }
-//    }
+    override func viewDidAppear(_ animated: Bool) {
+        if appDelegate.count == 0 {
+            //let todayMenuVC = TodaysMenuViewController()
+            //self.navigationController?.pushViewController(todayMenuVC, animated: true)
+            
+            self.appDelegate.count += 1
+            
+            print (self.appDelegate.count)
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -102,7 +103,22 @@ class MonthlyMenuViewController: UIViewController, UICollectionViewDataSource, U
         let height: CGFloat = width * 1.0
         
         return CGSize(width: width, height: height)
+    }
+    
+    
+    // タッチイベント
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+        // before.textLabel.backgroundColor = UIColor(red: 247 / 255, green: 247 / 255, blue: 247 / 255, alpha: 1.0)
+        if (before != nil){
+            before.textLabel.backgroundColor = UIColor(red: 247 / 255, green: 247 / 255, blue: 247 / 255, alpha: 1.0)
+        }
+    
+        let cell = collectionView.cellForItem(at: indexPath) as! CalendarCell
+        if (indexPath.section == 1){
+            cell.textLabel.backgroundColor = UIColor(red: 0 / 255, green: 255 / 255, blue: 0 / 255, alpha: 1.0)
+        }
         
+        before = cell
     }
     
     //セルの垂直方向のマージンを設定

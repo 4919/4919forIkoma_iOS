@@ -13,9 +13,16 @@
               }
             },
             "side_dish":{
-              ""
-            }
-    },
+              "おでん":{
+                "Allergen":{
+                  "Allergen1" : "",
+                  "Allergen2" : ""
+                },
+              }
+            },
+            ""
+
+            },
     "energy" : 678,
     "protein" : 27.1
 }

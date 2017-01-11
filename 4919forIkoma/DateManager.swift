@@ -45,7 +45,6 @@ class DateManager: NSObject {
         formatter.dateFormat = "d"
         return formatter.string(from: currentMonthOfDates[indexPath.row])
     }
-    
 }
 
 
