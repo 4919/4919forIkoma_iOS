@@ -46,6 +46,10 @@
 		9529F20E1E2549F900046617 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 9529F20C1E2549F900046617 /* pin.png */; };
 		9529F2111E2559B300046617 /* calendar2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9529F20F1E2559B300046617 /* calendar2.png */; };
 		9529F2121E2559B300046617 /* pin2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9529F2101E2559B300046617 /* pin2.png */; };
+		953C88621E2675530007432C /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 953C88611E2675530007432C /* circle.png */; };
+		953C88661E26835F0007432C /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953C88651E26835F0007432C /* ScheduleCell.swift */; };
+		953C886C1E2694EC0007432C /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953C886B1E2694EC0007432C /* MenuModel.swift */; };
+		953C886E1E271E4A0007432C /* DetailOfAllergenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953C886D1E271E4A0007432C /* DetailOfAllergenViewController.swift */; };
 		9598E8841E2265CF008F0843 /* SettingMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9598E8831E2265CF008F0843 /* SettingMenuViewController.swift */; };
 		9598E8861E226E40008F0843 /* MonthlyMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9598E8851E226E40008F0843 /* MonthlyMenuViewController.swift */; };
 		95AAB44D1E20C17C00F89E83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AAB44C1E20C17C00F89E83 /* AppDelegate.swift */; };
@@ -153,6 +157,10 @@
 		9529F20C1E2549F900046617 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pin.png; path = 4919forIkoma/Image/pin.png; sourceTree = SOURCE_ROOT; };
 		9529F20F1E2559B300046617 /* calendar2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calendar2.png; path = 4919forIkoma/Image/calendar2.png; sourceTree = SOURCE_ROOT; };
 		9529F2101E2559B300046617 /* pin2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pin2.png; path = 4919forIkoma/Image/pin2.png; sourceTree = SOURCE_ROOT; };
+		953C88611E2675530007432C /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = circle.png; path = 4919forIkoma/Image/circle.png; sourceTree = SOURCE_ROOT; };
+		953C88651E26835F0007432C /* ScheduleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
+		953C886B1E2694EC0007432C /* MenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
+		953C886D1E271E4A0007432C /* DetailOfAllergenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailOfAllergenViewController.swift; sourceTree = "<group>"; };
 		9598E8831E2265CF008F0843 /* SettingMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingMenuViewController.swift; sourceTree = "<group>"; };
 		9598E8851E226E40008F0843 /* MonthlyMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthlyMenuViewController.swift; sourceTree = "<group>"; };
 		95AAB4491E20C17C00F89E83 /* 4919forIkoma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 4919forIkoma.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -294,7 +302,6 @@
 			isa = PBXGroup;
 			children = (
 				95AAB44B1E20C17C00F89E83 /* 4919forIkoma */,
-				95AAB4601E20C17C00F89E83 /* 4919forIkomaTests */,
 				95AAB46B1E20C17C00F89E83 /* 4919forIkomaUITests */,
 				95AAB44A1E20C17C00F89E83 /* Products */,
 				C16CD7C5721D48E801FC676B /* Pods */,
@@ -321,6 +328,10 @@
 				9598E8831E2265CF008F0843 /* SettingMenuViewController.swift */,
 				95095E2E1E245DEA00CFCADC /* DateManager.swift */,
 				95095E301E245E2E00CFCADC /* CalendarCell.swift */,
+				953C88651E26835F0007432C /* ScheduleCell.swift */,
+				953C886B1E2694EC0007432C /* MenuModel.swift */,
+				953C886D1E271E4A0007432C /* DetailOfAllergenViewController.swift */,
+				95AAB4601E20C17C00F89E83 /* 4919forIkomaTests */,
 				95AAB4531E20C17C00F89E83 /* Assets.xcassets */,
 				95AAB4501E20C17C00F89E83 /* Main.storyboard */,
 				95AAB4551E20C17C00F89E83 /* LaunchScreen.storyboard */,
@@ -338,7 +349,7 @@
 				95AAB4631E20C17C00F89E83 /* Info.plist */,
 			);
 			path = 4919forIkomaTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		95AAB46B1E20C17C00F89E83 /* 4919forIkomaUITests */ = {
 			isa = PBXGroup;
@@ -362,6 +373,7 @@
 				95260CA41E22DB200060C360 /* 7Allergens */,
 				95260CAC1E22DB200060C360 /* 20Allergens */,
 				95AAB4CD1E2122E500F89E83 /* settingIcon.png */,
+				953C88611E2675530007432C /* circle.png */,
 				95AAB4841E20C22300F89E83 /* splashScreen_4919forIkoma1.png */,
 				95AAB4851E20C22300F89E83 /* splashScreen_4919forIkoma4.7.png */,
 				95AAB4861E20C22300F89E83 /* splashScreen_4919forIkoma5.5.png */,
@@ -591,6 +603,7 @@
 				95260CCE1E22DB200060C360 /* allergy_goma.png in Resources */,
 				95AAB4521E20C17C00F89E83 /* Main.storyboard in Resources */,
 				95BB31001E21F913003E3BF3 /* memo_board.png in Resources */,
+				953C88621E2675530007432C /* circle.png in Resources */,
 				95260CD81E22DB200060C360 /* allergy_saba.png in Resources */,
 				95AAB4CE1E2122E500F89E83 /* settingIcon.png in Resources */,
 				95AAB4BE1E2107EE00F89E83 /* lunch_Koppepan.png in Resources */,
@@ -764,9 +777,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				953C886E1E271E4A0007432C /* DetailOfAllergenViewController.swift in Sources */,
+				953C886C1E2694EC0007432C /* MenuModel.swift in Sources */,
 				9598E8841E2265CF008F0843 /* SettingMenuViewController.swift in Sources */,
 				95095E311E245E2E00CFCADC /* CalendarCell.swift in Sources */,
 				95095E2F1E245DEA00CFCADC /* DateManager.swift in Sources */,
+				953C88661E26835F0007432C /* ScheduleCell.swift in Sources */,
 				9598E8861E226E40008F0843 /* MonthlyMenuViewController.swift in Sources */,
 				95AAB44D1E20C17C00F89E83 /* AppDelegate.swift in Sources */,
 				95BB31091E225CE8003E3BF3 /* TodaysMenuViewController.swift in Sources */,

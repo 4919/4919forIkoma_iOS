@@ -1,14 +1,14 @@
 //
-//  SettingMenuViewController.swift
+//  DetailOfAllergenViewController.swift
 //  4919forIkoma
 //
-//  Created by Kawanaka Shogo on H29/01/08.
+//  Created by Kawanaka Shogo on H29/01/12.
 //  Copyright © 平成29年 Nara Institute of Science and Technology. All rights reserved.
 //
 
 import UIKit
 
-class SettingMenuViewController: UIViewController {
+class DetailOfAllergenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,5 +24,5 @@ class SettingMenuViewController: UIViewController {
     @IBAction func BackPage(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
+
 }
