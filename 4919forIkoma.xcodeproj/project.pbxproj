@@ -91,6 +91,8 @@
 		95AAB4CC1E211E1800F89E83 /* lunch_Noodle.png in Resources */ = {isa = PBXBuildFile; fileRef = 95AAB4CB1E211E1800F89E83 /* lunch_Noodle.png */; };
 		95AAB4CE1E2122E500F89E83 /* settingIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 95AAB4CD1E2122E500F89E83 /* settingIcon.png */; };
 		95AD09C11E288B7000FC29E1 /* AllergenSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD09C01E288B7000FC29E1 /* AllergenSettingViewController.swift */; };
+		95AD09C31E28963200FC29E1 /* AccountSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD09C21E28963200FC29E1 /* AccountSettingViewController.swift */; };
+		95AD09C51E28964600FC29E1 /* NotificationSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD09C41E28964600FC29E1 /* NotificationSettingViewController.swift */; };
 		95BB30EF1E2129B3003E3BF3 /* backIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 95BB30EE1E2129B3003E3BF3 /* backIcon.png */; };
 		95BB30F91E218108003E3BF3 /* menu_ThreePointG.png in Resources */ = {isa = PBXBuildFile; fileRef = 95BB30F61E218108003E3BF3 /* menu_ThreePointG.png */; };
 		95BB30FA1E218108003E3BF3 /* menu_ThreePointR.png in Resources */ = {isa = PBXBuildFile; fileRef = 95BB30F71E218108003E3BF3 /* menu_ThreePointR.png */; };
@@ -215,6 +217,8 @@
 		95AAB4CB1E211E1800F89E83 /* lunch_Noodle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lunch_Noodle.png; path = 4919forIkoma/Image/lunch_Noodle.png; sourceTree = SOURCE_ROOT; };
 		95AAB4CD1E2122E500F89E83 /* settingIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settingIcon.png; path = 4919forIkoma/Image/settingIcon.png; sourceTree = SOURCE_ROOT; };
 		95AD09C01E288B7000FC29E1 /* AllergenSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllergenSettingViewController.swift; sourceTree = "<group>"; };
+		95AD09C21E28963200FC29E1 /* AccountSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSettingViewController.swift; sourceTree = "<group>"; };
+		95AD09C41E28964600FC29E1 /* NotificationSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationSettingViewController.swift; sourceTree = "<group>"; };
 		95BB30EE1E2129B3003E3BF3 /* backIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backIcon.png; path = 4919forIkoma/Image/backIcon.png; sourceTree = SOURCE_ROOT; };
 		95BB30F61E218108003E3BF3 /* menu_ThreePointG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu_ThreePointG.png; path = 4919forIkoma/Image/menu_ThreePointG.png; sourceTree = SOURCE_ROOT; };
 		95BB30F71E218108003E3BF3 /* menu_ThreePointR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu_ThreePointR.png; path = 4919forIkoma/Image/menu_ThreePointR.png; sourceTree = SOURCE_ROOT; };
@@ -344,6 +348,8 @@
 				953C88711E27A9CE0007432C /* DetailOfEnerggieViewController.swift */,
 				953C88731E27AA270007432C /* DetailOfNutritionalBalanceViewController.swift */,
 				95AD09C01E288B7000FC29E1 /* AllergenSettingViewController.swift */,
+				95AD09C21E28963200FC29E1 /* AccountSettingViewController.swift */,
+				95AD09C41E28964600FC29E1 /* NotificationSettingViewController.swift */,
 				953C88751E27AA420007432C /* AboutViewController.swift */,
 				95095E2E1E245DEA00CFCADC /* DateManager.swift */,
 				95095E301E245E2E00CFCADC /* CalendarCell.swift */,
@@ -804,8 +810,10 @@
 				953C886E1E271E4A0007432C /* DetailOfAllergenViewController.swift in Sources */,
 				953C886C1E2694EC0007432C /* MenuModel.swift in Sources */,
 				953C88721E27A9CE0007432C /* DetailOfEnerggieViewController.swift in Sources */,
+				95AD09C51E28964600FC29E1 /* NotificationSettingViewController.swift in Sources */,
 				95AD09C11E288B7000FC29E1 /* AllergenSettingViewController.swift in Sources */,
 				9598E8841E2265CF008F0843 /* SettingMenuViewController.swift in Sources */,
+				95AD09C31E28963200FC29E1 /* AccountSettingViewController.swift in Sources */,
 				95095E311E245E2E00CFCADC /* CalendarCell.swift in Sources */,
 				95095E2F1E245DEA00CFCADC /* DateManager.swift in Sources */,
 				953C88761E27AA420007432C /* AboutViewController.swift in Sources */,

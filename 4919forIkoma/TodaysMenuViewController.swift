@@ -23,9 +23,9 @@ class TodaysMenuViewController: UIViewController{
     
     /** SubData **/
     @IBOutlet weak var energyNum: UILabel!
+    @IBOutlet weak var redPoint: UILabel!
     @IBOutlet weak var yellowPoint: UILabel!
     @IBOutlet weak var greenPoint: UILabel!
-    @IBOutlet weak var redPoint: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +52,23 @@ class TodaysMenuViewController: UIViewController{
             print (appDelegate.uid)
         })
         }
+        
+        let today = "170112"
+        let rootRef = FIRDatabase.database().reference()
+        rootRef.child(today).observeSingleEvent(of: .value, with: { (snapshot) in
+            snapshot.value!
+        })
+        
+        
     }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        let rootRef = FIRDatabase.database().reference()
+//        rootRef.child("170112").child("energy").observeSingleEvent(of: .value, with: { (snapshot) in
+//            print (snapshot.value!)
+//            self.energyNum.text = String(describing: snapshot.value!)
+//        })
+//    }
 
 //    @IBAction func backToMonthly(_ sender: Any) {
 //        self.navigationController?.popViewController(animated: true)
