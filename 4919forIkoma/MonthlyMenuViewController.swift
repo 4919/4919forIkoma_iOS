@@ -157,8 +157,6 @@ class MonthlyMenuViewController: UIViewController, UICollectionViewDataSource, U
                 }
             }
         before = cell
-        }else{
-            
         }
     }
     
