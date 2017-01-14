@@ -20,7 +20,7 @@ class ScheduleCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func configureCell(menuList:MenuList){
+    func configureCell(_ menuList:MenuList){
         menuLabel.text = menuList.menuName
         menuImage.image = UIImage(named: menuList.imageName)
     }

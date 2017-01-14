@@ -9,7 +9,7 @@
 import UIKit
 
 class CalendarCell: UICollectionViewCell {
-    public var textLabel: UILabel!
+    open var textLabel: UILabel!
     
     required init(coder aDecoder:NSCoder){
         super.init(coder: aDecoder)!

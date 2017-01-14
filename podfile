@@ -7,6 +7,8 @@ target '4919forIkoma' do
 
   # Firebase
 
+  pod 'JAYSON'
+  
   pod 'Firebase'
   pod 'Firebase/Core'
   pod 'Firebase/Auth'

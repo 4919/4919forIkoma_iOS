@@ -9,6 +9,7 @@
 
 import UIKit
 import Firebase
+import JAYSON
 
 class TodaysMenuViewController: UIViewController{
     
@@ -31,7 +32,7 @@ class TodaysMenuViewController: UIViewController{
         super.viewDidLoad()
         
         let now = Date()
-        let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        // let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         
         /**日にちを取得**/
         let formatter = DateFormatter()
@@ -43,22 +44,11 @@ class TodaysMenuViewController: UIViewController{
         let todaysMenu:String! = (formatter.string(from: now))
         self.naviBar.title = todaysMenu
         
-        if appDelegate.uid != String(true){
-        FIRAuth.auth()?.signInAnonymously(completion: { (user, error) in
-            let isAnonymous = user!.isAnonymous
-            appDelegate.uid = user!.uid
-
-            print (isAnonymous)
-            print (appDelegate.uid)
-        })
-        }
-        
         let today = "170112"
         let rootRef = FIRDatabase.database().reference()
         rootRef.child(today).observeSingleEvent(of: .value, with: { (snapshot) in
-            snapshot.value!
+            print(snapshot.value!)
         })
-        
         
     }
     

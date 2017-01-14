@@ -29,9 +29,9 @@ class MonthlyMenuViewController: UIViewController, UICollectionViewDataSource, U
     let dateManager = DateManager()
     let daysPerWeek: Int = 7
     let cellMargin: CGFloat = 2.0
-    var selectedDate = NSDate()
+    var selectedDate = Date()
     var before:CalendarCell!
-    var today: NSDate!
+    var today: Date!
     
     let weekArray = ["日", "月", "火", "水", "木", "金", "土"]
     var menuList:[MenuList] = [MenuList]()
@@ -64,12 +64,12 @@ class MonthlyMenuViewController: UIViewController, UICollectionViewDataSource, U
         tableView.delegate = self
         tableView.dataSource = self
         
-        setupMenuList(menuName:"ごはん" , imageName: "lunch_Rice")
-        setupMenuList(menuName:"ししゃものかんろに" , imageName: "lunch_Sakana")
-        setupMenuList(menuName:"だいこんサラダ" , imageName: "lunch_Kobachi")
-        setupMenuList(menuName:"カレーうどん" , imageName: "lunch_Noodle")
-        setupMenuList(menuName:"ぎゅうにゅう" , imageName: "lunch_MilkBin")
-        setupMenuList(menuName:"みかん" , imageName: "lunch_Dezert")
+        setupMenuList("ごはん" , imageName: "lunch_Rice")
+        setupMenuList("ししゃものかんろに" , imageName: "lunch_Sakana")
+        setupMenuList("だいこんサラダ" , imageName: "lunch_Kobachi")
+        setupMenuList("カレーうどん" , imageName: "lunch_Noodle")
+        setupMenuList("ぎゅうにゅう" , imageName: "lunch_MilkBin")
+        setupMenuList("みかん" , imageName: "lunch_Dezert")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -88,7 +88,7 @@ class MonthlyMenuViewController: UIViewController, UICollectionViewDataSource, U
         if(before != nil){
             before.textLabel.backgroundColor = UIColor(red: 247 / 255, green: 247 / 255, blue: 247 / 255, alpha: 1.0)
         }
-        putBackgroundImage(cell: cell)
+        putBackgroundImage(cell)
         before = cell
     }
 
@@ -127,7 +127,7 @@ class MonthlyMenuViewController: UIViewController, UICollectionViewDataSource, U
         if indexPath.section == 0{
             cell.textLabel.text = weekArray[indexPath.row]
         } else{
-            cell.textLabel.text = dateManager.conversionDateFormat(indexPath: indexPath as NSIndexPath)
+            cell.textLabel.text = dateManager.conversionDateFormat((indexPath as NSIndexPath) as IndexPath)
         }
         
         return cell
@@ -150,7 +150,7 @@ class MonthlyMenuViewController: UIViewController, UICollectionViewDataSource, U
         let cell = collectionView.cellForItem(at: indexPath) as! CalendarCell
         // 曜日のセッションは丸印をつけれないようにする
         if (indexPath.section == 1){
-            putBackgroundImage(cell: cell)
+            putBackgroundImage(cell)
             if (before != nil){
                 if (cell != before){
                     before.textLabel.backgroundColor = UIColor(red: 247 / 255, green: 247 / 255, blue: 247 / 255, alpha: 1.0)
@@ -171,7 +171,7 @@ class MonthlyMenuViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     // セルの背景に丸印をつける
-    func putBackgroundImage(cell : CalendarCell){
+    func putBackgroundImage(_ cell : CalendarCell){
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width:self.collectionView.frame.width , height:self.collectionView.frame.height ))
         let image = UIImage(named: "circle")
         imageView.image = image
@@ -184,7 +184,7 @@ class MonthlyMenuViewController: UIViewController, UICollectionViewDataSource, U
     
     // TableViewの設定
     // セクション数
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         
         return 1
     }
@@ -201,13 +201,13 @@ class MonthlyMenuViewController: UIViewController, UICollectionViewDataSource, U
         print ("tableView Now")
 
         let cell: ScheduleCell = tableView.dequeueReusableCell(withIdentifier: "scheduleCell", for: indexPath) as! ScheduleCell
-        cell.configureCell(menuList: menuList[indexPath.row])
+        cell.configureCell(menuList[indexPath.row])
         
         return cell
     }
     
     // データセットを作成
-    func setupMenuList(menuName: String, imageName: String){
+    func setupMenuList(_ menuName: String, imageName: String){
         let data = MenuList(menuName: menuName, imageName: imageName)
         menuList.append(data)
     }
