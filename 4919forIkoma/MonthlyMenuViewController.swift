@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import JAYSON
 
 extension UIColor {
     class func lightBlue() -> UIColor {
@@ -23,6 +25,7 @@ class MonthlyMenuViewController: UIViewController, UICollectionViewDataSource, U
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var naviBar: UINavigationItem!
+    @IBOutlet weak var menuLabel: UILabel!
     
     let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -32,6 +35,7 @@ class MonthlyMenuViewController: UIViewController, UICollectionViewDataSource, U
     var selectedDate = Date()
     var before:CalendarCell!
     var today: Date!
+    var todaysMenu: String! = ""
     
     let weekArray = ["日", "月", "火", "水", "木", "金", "土"]
     var menuList:[MenuList] = [MenuList]()
@@ -50,7 +54,7 @@ class MonthlyMenuViewController: UIViewController, UICollectionViewDataSource, U
         formatter.dateFormat = "M"
         
         /**メニューバータイトル変更**/
-        let todaysMenu:String! = (formatter.string(from: now))
+        todaysMenu = (formatter.string(from: now))
         self.naviBar.title = todaysMenu + "月のメニュー"
 
         // CollectionViewの設定
@@ -63,14 +67,7 @@ class MonthlyMenuViewController: UIViewController, UICollectionViewDataSource, U
         // TableViewの設定
         tableView.delegate = self
         tableView.dataSource = self
-        
-        setupMenuList("ごはん" , imageName: "lunch_Rice")
-        setupMenuList("ししゃものかんろに" , imageName: "lunch_Sakana")
-        setupMenuList("だいこんサラダ" , imageName: "lunch_Kobachi")
-        setupMenuList("カレーうどん" , imageName: "lunch_Noodle")
-        setupMenuList("ぎゅうにゅう" , imageName: "lunch_MilkBin")
-        setupMenuList("みかん" , imageName: "lunch_Dezert")
-    }
+        }
     
     override func viewDidAppear(_ animated: Bool) {
         let now = Date()
@@ -82,13 +79,14 @@ class MonthlyMenuViewController: UIViewController, UICollectionViewDataSource, U
         let today:String! = (formatter.string(from: now))
         print (today)
         
-        let indexPath:IndexPath = [1 , Int(today)!-1 ]
+        
+        let indexPath:IndexPath = [1 , Int(today)!-1-dateManager.initialNumOfItems]
         let cell = collectionView.cellForItem(at: indexPath) as! CalendarCell
         
         if(before != nil){
             before.textLabel.backgroundColor = UIColor(red: 247 / 255, green: 247 / 255, blue: 247 / 255, alpha: 1.0)
         }
-        putBackgroundImage(cell)
+        // putBackgroundImage(cell)
         before = cell
     }
 
@@ -137,8 +135,7 @@ class MonthlyMenuViewController: UIViewController, UICollectionViewDataSource, U
         let numberOfMargin: CGFloat = 8.0
         let width: CGFloat = (collectionView.frame.size.width - cellMargin * numberOfMargin) / CGFloat(daysPerWeek)
         let height: CGFloat = width * 1.0
-        
-        print (indexPath)
+//        print (indexPath)
         
         return CGSize(width: width, height: height)
     }
@@ -146,18 +143,73 @@ class MonthlyMenuViewController: UIViewController, UICollectionViewDataSource, U
     
     // セルのタッチイベント
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
-        print (indexPath)
+        print (indexPath.row)
         let cell = collectionView.cellForItem(at: indexPath) as! CalendarCell
-        // 曜日のセッションは丸印をつけれないようにする
-        if (indexPath.section == 1){
-            putBackgroundImage(cell)
-            if (before != nil){
-                if (cell != before){
-                    before.textLabel.backgroundColor = UIColor(red: 247 / 255, green: 247 / 255, blue: 247 / 255, alpha: 1.0)
+        
+        // 26以上 // 6以下
+        if ((indexPath.row <= 6 && Int(cell.textLabel.text!)! >= 26 ) || (indexPath.row >= 28 && Int(cell.textLabel.text!)! <= 6  )) == false{
+            // 曜日のセッションは丸印をつけれないようにする
+            if (indexPath.section == 1){
+                putBackgroundImage(cell)
+                if (before != nil){
+                    if (cell != before){
+                        before.textLabel.backgroundColor = UIColor(red: 247 / 255, green: 247 / 255, blue: 247 / 255, alpha: 1.0)
+                    }
                 }
+                before = cell
             }
-        before = cell
+            
+            let selectedDay :String! = cell.textLabel.text!
+            var todayMenu:String! = ""
+            var fetch_slectedDay:String! = ""
+            
+            
+            if selectedDay.characters.count == 1 {
+                if todaysMenu.characters.count == 1{
+                    todayMenu = "0" + todaysMenu
+                } else if todaysMenu.characters.count == 2{
+                    todayMenu = todaysMenu
+                }
+                ///MEMO **** 17は別の取得方法をすべき
+                fetch_slectedDay = "17" + todayMenu + "0" + selectedDay
+            }else if selectedDay.characters.count == 2{
+                if todaysMenu.characters.count == 1{
+                    todayMenu = "0" + todaysMenu
+                } else if todaysMenu.characters.count == 2{
+                    todayMenu = todaysMenu
+                }
+                fetch_slectedDay = "17" + todayMenu + selectedDay
+            }
+            
+            let rootRef = FIRDatabase.database().reference()
+            
+            rootRef.child(fetch_slectedDay).child("menu_list").observeSingleEvent(of: .value, with: {(snapshot) in
+                print(snapshot.exists())
+                
+                if snapshot.childSnapshot(forPath: "staple").exists(){
+                    self.setupMenuList(String(describing: snapshot.childSnapshot(forPath: "staple").childSnapshot(forPath: "name").value!), imageName: "lunch_Rice" )
+                }
+                if snapshot.childSnapshot(forPath: "main_dish").exists(){
+                    self.setupMenuList(String(describing: snapshot.childSnapshot(forPath: "main_dish").childSnapshot(forPath: "name").value!), imageName: "lunch_Sakana")
+                }
+                if snapshot.childSnapshot(forPath: "side_dish").exists(){
+                    self.setupMenuList(String(describing: snapshot.childSnapshot(forPath: "side_dish").childSnapshot(forPath: "name").value!) , imageName: "lunch_Kobachi")
+                }
+                if snapshot.childSnapshot(forPath: "soup").exists(){
+                    self.setupMenuList(String(describing: snapshot.childSnapshot(forPath: "soup").childSnapshot(forPath: "name").value!) , imageName: "lunch_Noodle")
+                }
+                if snapshot.childSnapshot(forPath: "staple").exists(){
+                    self.setupMenuList("ぎゅうにゅう" , imageName: "lunch_MilkBin")
+                }
+                if snapshot.childSnapshot(forPath: "dezert").exists(){
+                    self.setupMenuList( String(describing: snapshot.childSnapshot(forPath: "dezert").childSnapshot(forPath: "name").value!), imageName: "lunch_Dezert")
+                }
+                
+                self.tableView.reloadData()
+                
+            })
         }
+        self.menuList = [MenuList]()
     }
     
     //セルの垂直方向のマージンを設定
@@ -185,7 +237,6 @@ class MonthlyMenuViewController: UIViewController, UICollectionViewDataSource, U
     // TableViewの設定
     // セクション数
     func numberOfSections(in tableView: UITableView) -> Int {
-        
         return 1
     }
     

@@ -12,13 +12,14 @@ class DateManager: NSObject {
     var currentMonthOfDates = [Date]()
     var selectedDate = Date()
     let daysPerWeek: Int = 7
-    var numeberOfItems: Int!
+    var numberOfItems: Int!
+    var initialNumOfItems: Int!
     
     func daysAcquisition() -> Int{
         let rangeOfWeeks = Calendar.current.range(of: .weekOfMonth, in: .month, for: firstDateOfMonth())
         let numberOfWeeks = rangeOfWeeks?.count
-        numeberOfItems = numberOfWeeks! * daysPerWeek
-        return numeberOfItems
+        numberOfItems = numberOfWeeks! * daysPerWeek
+        return numberOfItems
     }
     
     func firstDateOfMonth() -> Date{
@@ -33,6 +34,9 @@ class DateManager: NSObject {
         for i in 0 ..< numberOfItems {
             var dateComponents = DateComponents()
             dateComponents.day = i - (ordinalityOfFirstDay! - 1)
+            if i == 0{
+                initialNumOfItems = i - (ordinalityOfFirstDay! - 1)
+            }
             
             let date = Calendar.current.date(byAdding: dateComponents as DateComponents, to: firstDateOfMonth())
             currentMonthOfDates.append(date!)
@@ -40,7 +44,7 @@ class DateManager: NSObject {
     }
     
     func conversionDateFormat(_ indexPath: IndexPath) -> String{
-        dateForCellAtIndexPath(numeberOfItems)
+        dateForCellAtIndexPath(numberOfItems)
         let formatter: DateFormatter = DateFormatter()
         formatter.dateFormat = "d"
         return formatter.string(from: currentMonthOfDates[indexPath.row])

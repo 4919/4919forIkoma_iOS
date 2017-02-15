@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,12 +23,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="splashIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="gem-7B-vSM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="gem-7B-vSM">
                                 <rect key="frame" x="97" y="208" width="180" height="250"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gem-7B-vSM" secondAttribute="height" multiplier="18:25" id="oSm-Y1-uli"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.94901960780000005" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="gem-7B-vSM" secondAttribute="trailing" constant="82" id="8w9-rg-6jh"/>
+                            <constraint firstItem="gem-7B-vSM" firstAttribute="leading" secondItem="30y-YP-YOI" secondAttribute="leadingMargin" constant="81" id="Lw4-Ik-3yx"/>
+                            <constraint firstItem="gem-7B-vSM" firstAttribute="top" secondItem="p9r-lL-XRC" secondAttribute="bottom" constant="188" id="eWN-vT-i3K"/>
+                            <constraint firstItem="jrp-or-7BM" firstAttribute="top" secondItem="gem-7B-vSM" secondAttribute="bottom" constant="209" id="soY-1N-yPt"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="splashImageView" destination="gem-7B-vSM" id="eY0-W9-iYk"/>

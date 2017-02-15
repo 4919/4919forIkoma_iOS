@@ -10,8 +10,14 @@ import UIKit
 
 class DetailOfAllergenViewController: UIViewController {
 
+    @IBOutlet weak var rakkasei_label: UILabel!
+    @IBOutlet weak var nats_label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        rakkasei_label.adjustsFontSizeToFitWidth = true
+        nats_label.adjustsFontSizeToFitWidth = true
 
         // Do any additional setup after loading the view.
     }
@@ -24,5 +30,4 @@ class DetailOfAllergenViewController: UIViewController {
     @IBAction func BackPage(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
-
 }
