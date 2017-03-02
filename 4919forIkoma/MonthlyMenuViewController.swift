@@ -135,7 +135,6 @@ class MonthlyMenuViewController: UIViewController, UICollectionViewDataSource, U
         let numberOfMargin: CGFloat = 8.0
         let width: CGFloat = (collectionView.frame.size.width - cellMargin * numberOfMargin) / CGFloat(daysPerWeek)
         let height: CGFloat = width * 1.0
-//        print (indexPath)
         
         return CGSize(width: width, height: height)
     }
@@ -143,6 +142,7 @@ class MonthlyMenuViewController: UIViewController, UICollectionViewDataSource, U
     
     // セルのタッチイベント
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+        self.menuList.removeAll()
         print (indexPath.row)
         let cell = collectionView.cellForItem(at: indexPath) as! CalendarCell
         
@@ -184,10 +184,11 @@ class MonthlyMenuViewController: UIViewController, UICollectionViewDataSource, U
             let rootRef = FIRDatabase.database().reference()
             
             rootRef.child(fetch_slectedDay).child("menu_list").observeSingleEvent(of: .value, with: {(snapshot) in
-                print(snapshot.exists())
-                
                 if snapshot.childSnapshot(forPath: "staple").exists(){
                     self.setupMenuList(String(describing: snapshot.childSnapshot(forPath: "staple").childSnapshot(forPath: "name").value!), imageName: "lunch_Rice" )
+                    self.setupMenuList("ぎゅうにゅう" , imageName: "lunch_MilkBin")
+                }else{
+                    self.setupMenuList("お休み", imageName: "rest_icon")
                 }
                 if snapshot.childSnapshot(forPath: "main_dish").exists(){
                     self.setupMenuList(String(describing: snapshot.childSnapshot(forPath: "main_dish").childSnapshot(forPath: "name").value!), imageName: "lunch_Sakana")
@@ -198,9 +199,6 @@ class MonthlyMenuViewController: UIViewController, UICollectionViewDataSource, U
                 if snapshot.childSnapshot(forPath: "soup").exists(){
                     self.setupMenuList(String(describing: snapshot.childSnapshot(forPath: "soup").childSnapshot(forPath: "name").value!) , imageName: "lunch_Noodle")
                 }
-                if snapshot.childSnapshot(forPath: "staple").exists(){
-                    self.setupMenuList("ぎゅうにゅう" , imageName: "lunch_MilkBin")
-                }
                 if snapshot.childSnapshot(forPath: "dezert").exists(){
                     self.setupMenuList( String(describing: snapshot.childSnapshot(forPath: "dezert").childSnapshot(forPath: "name").value!), imageName: "lunch_Dezert")
                 }
@@ -209,7 +207,7 @@ class MonthlyMenuViewController: UIViewController, UICollectionViewDataSource, U
                 
             })
         }
-        self.menuList = [MenuList]()
+        self.menuList.removeAll()
     }
     
     //セルの垂直方向のマージンを設定

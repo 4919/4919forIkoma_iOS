@@ -15,21 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var count: Int = 0
     var uid:String = ""
+    var allergens:[String] = [String]()
+    var ingredients:[String] = [String]()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         FIRApp.configure()
-        
-//        //windowを生成
-//        self.window = UIWindow(frame: UIScreen.main.bounds)
-//        //Storyboardを指定
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        //Viewcontrollerを指定
-//        let initialViewController = storyboard.instantiateViewController(withIdentifier: "todayMenu")
-//        //rootViewControllerに入れる
-//        self.window?.rootViewController = initialViewController
-//        //表示
-//        self.window?.makeKeyAndVisible()
         
         return true
     }

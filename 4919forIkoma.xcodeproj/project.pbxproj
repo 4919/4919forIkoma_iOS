@@ -66,6 +66,9 @@
 		9548FA591E2A42E4003D9734 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9548FA581E2A42E4003D9734 /* Splash.storyboard */; };
 		9598E8841E2265CF008F0843 /* SettingMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9598E8831E2265CF008F0843 /* SettingMenuViewController.swift */; };
 		9598E8861E226E40008F0843 /* MonthlyMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9598E8851E226E40008F0843 /* MonthlyMenuViewController.swift */; };
+		95A7E84E1E68527A009C5DC6 /* DetailMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A7E84D1E68527A009C5DC6 /* DetailMenuViewController.swift */; };
+		95A7E8501E6865C0009C5DC6 /* lunch_Jelly.png in Resources */ = {isa = PBXBuildFile; fileRef = 95A7E84F1E6865C0009C5DC6 /* lunch_Jelly.png */; };
+		95A7E8521E688582009C5DC6 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A7E8511E688582009C5DC6 /* CustomCollectionViewCell.swift */; };
 		95AAB44D1E20C17C00F89E83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AAB44C1E20C17C00F89E83 /* AppDelegate.swift */; };
 		95AAB4521E20C17C00F89E83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95AAB4501E20C17C00F89E83 /* Main.storyboard */; };
 		95AAB4541E20C17C00F89E83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95AAB4531E20C17C00F89E83 /* Assets.xcassets */; };
@@ -103,6 +106,7 @@
 		95C225671E52A9BA0053B27A /* categoryYellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C225641E52A9BA0053B27A /* categoryYellow.png */; };
 		95C225691E5350430053B27A /* allergy_ebi.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C225681E5350430053B27A /* allergy_ebi.png */; };
 		95C2256C1E5446210053B27A /* lunch_Fly.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C2256B1E5446210053B27A /* lunch_Fly.png */; };
+		95E41A861E68A0AE0015E098 /* rest_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 95E41A851E68A0AE0015E098 /* rest_icon.png */; };
 		C0C141547E9632C7CDEC02C2 /* Pods_4919forIkomaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62AE4B1D5B40A1E56B29BDA0 /* Pods_4919forIkomaTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -186,6 +190,9 @@
 		9548FA581E2A42E4003D9734 /* Splash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		9598E8831E2265CF008F0843 /* SettingMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingMenuViewController.swift; sourceTree = "<group>"; };
 		9598E8851E226E40008F0843 /* MonthlyMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthlyMenuViewController.swift; sourceTree = "<group>"; };
+		95A7E84D1E68527A009C5DC6 /* DetailMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailMenuViewController.swift; sourceTree = "<group>"; };
+		95A7E84F1E6865C0009C5DC6 /* lunch_Jelly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lunch_Jelly.png; path = 4919forIkoma/Image/lunch_Jelly.png; sourceTree = SOURCE_ROOT; };
+		95A7E8511E688582009C5DC6 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		95AAB4491E20C17C00F89E83 /* 4919forIkoma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 4919forIkoma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95AAB44C1E20C17C00F89E83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95AAB4511E20C17C00F89E83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -230,6 +237,7 @@
 		95C225641E52A9BA0053B27A /* categoryYellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = categoryYellow.png; path = 4919forIkoma/Image/categoryYellow.png; sourceTree = SOURCE_ROOT; };
 		95C225681E5350430053B27A /* allergy_ebi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = allergy_ebi.png; sourceTree = "<group>"; };
 		95C2256B1E5446210053B27A /* lunch_Fly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lunch_Fly.png; path = 4919forIkoma/Image/lunch_Fly.png; sourceTree = SOURCE_ROOT; };
+		95E41A851E68A0AE0015E098 /* rest_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rest_icon.png; path = 4919forIkoma/Image/rest_icon.png; sourceTree = SOURCE_ROOT; };
 		A8EBA7EA77A6D14BE1333B3C /* Pods-4919forIkomaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4919forIkomaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-4919forIkomaTests/Pods-4919forIkomaTests.release.xcconfig"; sourceTree = "<group>"; };
 		BC472715DD70EA875C635DA3 /* Pods-4919forIkomaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4919forIkomaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-4919forIkomaTests/Pods-4919forIkomaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F667BA5E22C00180A00F377A /* Pods-4919forIkomaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4919forIkomaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-4919forIkomaUITests/Pods-4919forIkomaUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -345,6 +353,8 @@
 				95AAB44C1E20C17C00F89E83 /* AppDelegate.swift */,
 				9548FA4D1E29DDE3003D9734 /* SplashScreenViewController.swift */,
 				95BB31081E225CE8003E3BF3 /* TodaysMenuViewController.swift */,
+				95A7E84D1E68527A009C5DC6 /* DetailMenuViewController.swift */,
+				95A7E8511E688582009C5DC6 /* CustomCollectionViewCell.swift */,
 				9598E8851E226E40008F0843 /* MonthlyMenuViewController.swift */,
 				9598E8831E2265CF008F0843 /* SettingMenuViewController.swift */,
 				953C886D1E271E4A0007432C /* DetailOfAllergenViewController.swift */,
@@ -392,6 +402,7 @@
 			isa = PBXGroup;
 			children = (
 				95095E341E250A9400CFCADC /* calendar.png */,
+				95E41A851E68A0AE0015E098 /* rest_icon.png */,
 				95095E321E24C24100CFCADC /* memo_board_cut.png */,
 				95AAB47E1E20C22300F89E83 /* appicon */,
 				95260CA41E22DB200060C360 /* 7Allergens */,
@@ -411,6 +422,7 @@
 				95BB31021E224752003E3BF3 /* calenderIcon.png */,
 				95AAB4B11E2107EE00F89E83 /* lunch_Dezert.png */,
 				95AAB4B21E2107EE00F89E83 /* lunch_Hashi.png */,
+				95A7E84F1E6865C0009C5DC6 /* lunch_Jelly.png */,
 				95AAB4CB1E211E1800F89E83 /* lunch_Noodle.png */,
 				95260C941E22BB120060C360 /* Background_classRoom.png */,
 				95BB30EE1E2129B3003E3BF3 /* backIcon.png */,
@@ -630,6 +642,7 @@
 				95AAB4C01E2107EE00F89E83 /* lunch_MisoSoup.png in Resources */,
 				9505DFB81E4116DF00DF94DE /* splashScreen_4919forIkoma5.5.png in Resources */,
 				95BB30FA1E218108003E3BF3 /* menu_ThreePointR.png in Resources */,
+				95E41A861E68A0AE0015E098 /* rest_icon.png in Resources */,
 				95AAB4BC1E2107EE00F89E83 /* lunch_Hashi.png in Resources */,
 				95AAB4C81E210A8A00F89E83 /* lunch_YasaiItame.png in Resources */,
 				95260CC81E22DB200060C360 /* allergy_awabi.png in Resources */,
@@ -658,6 +671,7 @@
 				9505DFC01E4178A300DF94DE /* icon_4919forIkoma.png in Resources */,
 				95260CD91E22DB200060C360 /* allergy_sake.png in Resources */,
 				950E51CA1E22A4600063997D /* backIconRev.png in Resources */,
+				95A7E8501E6865C0009C5DC6 /* lunch_Jelly.png in Resources */,
 				9529F20D1E2549F900046617 /* greenBoard.png in Resources */,
 				95AAB4C31E2107EE00F89E83 /* lunch_Soup.png in Resources */,
 				95AAB4C61E21094E00F89E83 /* lunch_Sakana.png in Resources */,
@@ -814,6 +828,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				953C886E1E271E4A0007432C /* DetailOfAllergenViewController.swift in Sources */,
+				95A7E8521E688582009C5DC6 /* CustomCollectionViewCell.swift in Sources */,
 				953C886C1E2694EC0007432C /* MenuModel.swift in Sources */,
 				953C88721E27A9CE0007432C /* DetailOfEnerggieViewController.swift in Sources */,
 				95AD09C51E28964600FC29E1 /* NotificationSettingViewController.swift in Sources */,
@@ -827,6 +842,7 @@
 				953C88661E26835F0007432C /* ScheduleCell.swift in Sources */,
 				9598E8861E226E40008F0843 /* MonthlyMenuViewController.swift in Sources */,
 				953C88741E27AA270007432C /* DetailOfNutritionalBalanceViewController.swift in Sources */,
+				95A7E84E1E68527A009C5DC6 /* DetailMenuViewController.swift in Sources */,
 				95AAB44D1E20C17C00F89E83 /* AppDelegate.swift in Sources */,
 				95BB31091E225CE8003E3BF3 /* TodaysMenuViewController.swift in Sources */,
 			);
