@@ -82,12 +82,9 @@ class TodaysMenuViewController: UIViewController{
         /**メニューバータイトル変更**/
         let todaysMenu:String! = (formatter_bar.string(from: now))
         self.todaymenu.text = todaysMenu
-        
-        today = formatter_today.string(from: now)
-//        let rootRef = FIRDatabase.database().reference()
-//        rootRef.child(today).observeSingleEvent(of: .value, with: { (snapshot) in
-//            print(snapshot.value!)
-//        })
+
+        // today = formatter_today.string(from: now)
+        today = "170302"
         
         todaymenu.adjustsFontSizeToFitWidth = true
         stapleLabel.adjustsFontSizeToFitWidth = true
@@ -184,6 +181,12 @@ class TodaysMenuViewController: UIViewController{
                         self.mainDishImg.image = UIImage(named: "lunch_Nikuryori.png")
                     }else if (String(describing: main_children.childSnapshot(forPath: "name").value!).contains("フライ") || String(describing: main_children.childSnapshot(forPath: "name").value!).contains("てんぷら") ){
                         self.mainDishImg.image = UIImage(named: "lunch_Fly.png")
+                    }else if (String(describing: main_children.childSnapshot(forPath: "name").value!).contains("コロッケ")){
+                        self.mainDishImg.image = UIImage(named: "lunch_Korokke.png")
+                        
+                    }else if (String(describing: main_children.childSnapshot(forPath: "name").value!).contains("いため")){
+                        self.mainDishImg.image = UIImage(named: "lunch_YasaiItame.png")
+                        
                     }else{
                         self.mainDishImg.image = UIImage(named: "lunch_Sakana.png")
                     }
@@ -207,7 +210,14 @@ class TodaysMenuViewController: UIViewController{
                         }
                     }
                     
-                    self.sideDishImg.image = UIImage(named: "lunch_Kobachi")
+                    if (String(describing: side_children.childSnapshot(forPath: "name").value!).contains("コロッケ")){
+                        self.sideDishImg.image = UIImage(named: "lunch_Korokke.png")
+                    }else{
+                        self.sideDishImg.image = UIImage(named: "lunch_Kobachi")
+                    }
+                    
+                    
+                    
                 }
                 
                 // スープ

@@ -66,6 +66,7 @@
 		9548FA591E2A42E4003D9734 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9548FA581E2A42E4003D9734 /* Splash.storyboard */; };
 		9598E8841E2265CF008F0843 /* SettingMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9598E8831E2265CF008F0843 /* SettingMenuViewController.swift */; };
 		9598E8861E226E40008F0843 /* MonthlyMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9598E8851E226E40008F0843 /* MonthlyMenuViewController.swift */; };
+		959B874E1E69AAB8006C3398 /* clipboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 959B874D1E69AAB8006C3398 /* clipboard.png */; };
 		95A7E84E1E68527A009C5DC6 /* DetailMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A7E84D1E68527A009C5DC6 /* DetailMenuViewController.swift */; };
 		95A7E8501E6865C0009C5DC6 /* lunch_Jelly.png in Resources */ = {isa = PBXBuildFile; fileRef = 95A7E84F1E6865C0009C5DC6 /* lunch_Jelly.png */; };
 		95A7E8521E688582009C5DC6 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A7E8511E688582009C5DC6 /* CustomCollectionViewCell.swift */; };
@@ -107,6 +108,7 @@
 		95C225691E5350430053B27A /* allergy_ebi.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C225681E5350430053B27A /* allergy_ebi.png */; };
 		95C2256C1E5446210053B27A /* lunch_Fly.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C2256B1E5446210053B27A /* lunch_Fly.png */; };
 		95E41A861E68A0AE0015E098 /* rest_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 95E41A851E68A0AE0015E098 /* rest_icon.png */; };
+		95E41A8C1E692E620015E098 /* lunch_Korokke.png in Resources */ = {isa = PBXBuildFile; fileRef = 95E41A8B1E692E620015E098 /* lunch_Korokke.png */; };
 		C0C141547E9632C7CDEC02C2 /* Pods_4919forIkomaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62AE4B1D5B40A1E56B29BDA0 /* Pods_4919forIkomaTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -190,6 +192,7 @@
 		9548FA581E2A42E4003D9734 /* Splash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		9598E8831E2265CF008F0843 /* SettingMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingMenuViewController.swift; sourceTree = "<group>"; };
 		9598E8851E226E40008F0843 /* MonthlyMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthlyMenuViewController.swift; sourceTree = "<group>"; };
+		959B874D1E69AAB8006C3398 /* clipboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = clipboard.png; path = 4919forIkoma/Image/clipboard.png; sourceTree = SOURCE_ROOT; };
 		95A7E84D1E68527A009C5DC6 /* DetailMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailMenuViewController.swift; sourceTree = "<group>"; };
 		95A7E84F1E6865C0009C5DC6 /* lunch_Jelly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lunch_Jelly.png; path = 4919forIkoma/Image/lunch_Jelly.png; sourceTree = SOURCE_ROOT; };
 		95A7E8511E688582009C5DC6 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -238,6 +241,7 @@
 		95C225681E5350430053B27A /* allergy_ebi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = allergy_ebi.png; sourceTree = "<group>"; };
 		95C2256B1E5446210053B27A /* lunch_Fly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lunch_Fly.png; path = 4919forIkoma/Image/lunch_Fly.png; sourceTree = SOURCE_ROOT; };
 		95E41A851E68A0AE0015E098 /* rest_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rest_icon.png; path = 4919forIkoma/Image/rest_icon.png; sourceTree = SOURCE_ROOT; };
+		95E41A8B1E692E620015E098 /* lunch_Korokke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lunch_Korokke.png; path = 4919forIkoma/Image/lunch_Korokke.png; sourceTree = SOURCE_ROOT; };
 		A8EBA7EA77A6D14BE1333B3C /* Pods-4919forIkomaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4919forIkomaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-4919forIkomaTests/Pods-4919forIkomaTests.release.xcconfig"; sourceTree = "<group>"; };
 		BC472715DD70EA875C635DA3 /* Pods-4919forIkomaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4919forIkomaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-4919forIkomaTests/Pods-4919forIkomaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F667BA5E22C00180A00F377A /* Pods-4919forIkomaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4919forIkomaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-4919forIkomaUITests/Pods-4919forIkomaUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -432,7 +436,9 @@
 				95AAB4B61E2107EE00F89E83 /* lunch_MisoSoup.png */,
 				95AAB4C91E2110B200F89E83 /* lunch_Nikuryori.png */,
 				95AAB4C51E21094E00F89E83 /* lunch_Sakana.png */,
+				959B874D1E69AAB8006C3398 /* clipboard.png */,
 				95AAB4B71E2107EE00F89E83 /* lunch_nan.png */,
+				95E41A8B1E692E620015E098 /* lunch_Korokke.png */,
 				950E51C91E22A4600063997D /* backIconRev.png */,
 				95BB30F61E218108003E3BF3 /* menu_ThreePointG.png */,
 				95BB30F71E218108003E3BF3 /* menu_ThreePointR.png */,
@@ -634,6 +640,7 @@
 				95AAB4C41E2107EE00F89E83 /* lunch_Tray.png in Resources */,
 				95AAB4BF1E2107EE00F89E83 /* lunch_MilkBin.png in Resources */,
 				95260CC71E22DB200060C360 /* allergy_tamago.png in Resources */,
+				959B874E1E69AAB8006C3398 /* clipboard.png in Resources */,
 				95260CDA1E22DB200060C360 /* allergy_toriniku.png in Resources */,
 				95260CD21E22DB200060C360 /* allergy_kiwi.png in Resources */,
 				9505DFC21E4178A300DF94DE /* icon_4919forIkoma@3.png in Resources */,
@@ -648,6 +655,7 @@
 				95260CC81E22DB200060C360 /* allergy_awabi.png in Resources */,
 				95260CD41E22DB200060C360 /* allergy_matsutake.png in Resources */,
 				95260CCE1E22DB200060C360 /* allergy_goma.png in Resources */,
+				95E41A8C1E692E620015E098 /* lunch_Korokke.png in Resources */,
 				9548FA571E29E752003D9734 /* Launch Screen.storyboard in Resources */,
 				95AAB4521E20C17C00F89E83 /* Main.storyboard in Resources */,
 				95BB31001E21F913003E3BF3 /* memo_board.png in Resources */,
